@@ -21,7 +21,7 @@ class PixelsController < ApplicationController
   end
 
   def generate_filial
-    pair_child_creator()
+    flash[:notice] = pair_child_creator()
     redirect_to root_path
   end
 

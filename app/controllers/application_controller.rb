@@ -34,6 +34,7 @@ class ApplicationController < ActionController::Base
     pairs.each do |pair|
       child_creator(pair.last, pair.first)
     end
-    text = 'Pixel'.pluralize(number)
+    text ="#{number} new #{'Pixel'.pluralize(number)} Created"
+    text
   end
 end
