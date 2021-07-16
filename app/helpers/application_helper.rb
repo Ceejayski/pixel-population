@@ -1,7 +1,11 @@
 module ApplicationHelper
   def base_creator_btn
     btns = []
-    btns[0] = (button_to 'Auto Generate Base', pixels_generate_path, method: :post) if Pixel.first.nil?
+    if Pixel.first.nil?
+      btns[0] = 'Simple Pixel Population Emulator, Click the button below to begin'
+      btns[1] =
+        (button_to 'Generate Base', pixels_generate_path, method: :post, class: 'btn btn-primary')
+    end
     btns
   end
 

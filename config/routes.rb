@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'pixels/index'
-  post 'pixels/create'
   post 'pixels/generate', to: 'pixels#generate_base'
   post 'pixels/generate_filial'
   get '/pixels/:id', to: 'pixels#show', as: 'pixel'
