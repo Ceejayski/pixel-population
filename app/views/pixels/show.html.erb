@@ -1,1 +1,97 @@
-show
+<div class="container mt-4">
+  
+
+  <div class="card">
+    <div class="card-header fw-bold text-center fs-3">
+      <%= @pixel.name %>
+    </div>
+    <div class="card-body">
+     <p class='fw-bold'> ID: <span class= 'fw-normal'> <%= @pixel.id %></span></p>
+     <p class='fw-bold'> Children: <span class= 'fw-normal'> <%= pixel_children(@pixel) %></span></p>
+     <div class="d-flex justify-content-between">
+     
+      <div class='gene-details d-flex align-items-center'>
+        <p class='me-2  fw-bold'>
+          Gene Sequence:
+        </p>
+          <div>
+            <p class='text-center mb-1'>
+              R
+            </p>
+            <div class='gene'>
+              <%= @pixel.R %>
+            </div>
+          </div>
+          <div>
+            <p class='text-center mb-1'>
+              G
+            </p>
+            <div class='gene'>
+              <%= @pixel.G %>
+            </div>
+          </div>
+          <div>
+            <p class='text-center mb-1'>
+              B
+            </p>
+            <div class='gene'>
+              <%= @pixel.B %>
+            </div>
+          </div>
+      </div>
+      
+      <% unless @pixel.parents.empty? %>
+          <div class="d-flex align-items-center justify-content-between">
+        <p class='fw-bold'>
+          parents: 
+        </p>
+
+           <div class="text-center ms-2">
+          <p class='mb-1 mx-2'>
+          <%= link_to(@parent_b) do %>
+            <%= @parent_a.name %>
+             <% end %>
+          </p>
+          <div class="d-flex">
+            <div class='gene'>
+              <%= @parent_a.R %>
+            </div>
+             <div class='gene'>
+              <%= @parent_a.G %>
+            </div>
+             <div class='gene'>
+              <%= @parent_a.B %>
+            </div>
+          </div>
+        </div>
+           <div class="text-center ms-2">
+          <p class='mb-1 mx-2'>
+            <%= link_to(@parent_b) do %>
+              <%= @parent_b.name %>
+            <% end %>
+            
+          </p>
+          <div class="d-flex">
+            <div class='gene'>
+              <%= @parent_b.R %>
+            </div>
+             <div class='gene'>
+              <%= @parent_b.G %>
+            </div>
+             <div class='gene'>
+              <%= @parent_b.B %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <% end %>
+      
+    
+     </div>
+     <p class="text-center mt-3">
+      <%= link_to 'Back', root_path, class: 'btn btn-secondary' %> 
+     </p>
+    </div>
+  </div>
+</div>

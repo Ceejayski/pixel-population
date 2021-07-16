@@ -14,3 +14,10 @@
  *= require_self
  */
  @import "bootstrap/scss/bootstrap.scss";
+
+ .gene {
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid #000;
+  width: 50px;
+ }
