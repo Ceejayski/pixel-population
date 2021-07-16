@@ -15,13 +15,14 @@ json.array! @pixels do |pixel|
     end
   else
     gene = "R#{pixel.parents[0].R}, B#{pixel.parents[0].B}, G#{pixel.parents[0].G}"
+    gene_b = "R#{pixel.parents[1].R}, B#{pixel.parents[1].B}, G#{pixel.parents[1].G}"
     json.parentA do
       json.id pixel.parents[0].id
       json.name gene
     end
     json.parentB do
       json.id pixel.parents[1].id
-      json.name gene
+      json.name gene_b
     end
   end
 end

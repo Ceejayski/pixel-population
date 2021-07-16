@@ -25,6 +25,7 @@
    const table = $('#example').DataTable(
         {
             "processing": true,
+            "serverSide": true,
              "order": [[ 0, "desc" ]],
             "ajax": {
                 "url": "/pixels/index.json",
