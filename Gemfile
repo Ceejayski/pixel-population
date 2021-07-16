@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '3.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
@@ -48,8 +48,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'guard', '~> 2.16', '>= 2.16.2'
   gem 'guard-livereload', '~> 2.5', require: false
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rexml', '~> 3.2', '>= 3.2.5'
 end
 
 group :test do

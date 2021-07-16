@@ -7,10 +7,8 @@
 #
 # set :output, "/path/to/my/cron_log.log"
 #
-every 1.minutes do
-  command "/usr/bin/some_great_command"
-  runner "MyModel.some_method"
-  rake "some:great:rake:task"
+every 1.minute do
+  rake 'create_new_generation'
 end
 
 # every 4.days do

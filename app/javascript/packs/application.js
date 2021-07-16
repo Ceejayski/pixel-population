@@ -7,9 +7,13 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "bootstrap"
 import "../stylesheets/application"
-global.toastr = require("toastr")
+require('datatables.net-bs4')
 
+import $ from 'jquery';
+global.$ = jQuery;
+require("packs/alert.js")
 
 
 Rails.start()

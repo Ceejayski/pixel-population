@@ -1,5 +1,5 @@
 class PixelsController < ApplicationController
-  before_action :set_article, only: %i[show]
+  before_action :set_pixel, only: %i[show]
   def index
     @pixels = Pixel.latest
   end
@@ -19,6 +19,12 @@ class PixelsController < ApplicationController
       format.js
     end
   end
+
+  def generate_filial
+    pair_child_creator()
+    redirect_to root_path
+  end
+
 
   def new
     @pixel = Pixel.new
