@@ -14,6 +14,7 @@ require('datatables.net-bs4')
 import $ from 'jquery';
 global.$ = jQuery;
 require("packs/alert.js")
+require("packs/cronjob.js")
 
 
 Rails.start()

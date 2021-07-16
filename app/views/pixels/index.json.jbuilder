@@ -1,4 +1,8 @@
-json.array! @pixels do |pixel|
+json.draw 10
+json.recordsTotal @pixels.size
+json.recordsFiltered @pixels.size
+
+json.data @pixels do |pixel|
   json.id pixel.id
   json.name pixel.name
   json.R pixel.R
